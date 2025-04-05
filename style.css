@@ -1,57 +1,75 @@
 body {
-  margin: 0;
-  padding: 0;
-  background: black;
-  color: white;
-  font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-#content {
-  text-align: center;
-}
-
-button {
-  font-size: 2rem;
-  padding: 20px 40px;
-  background-color: red;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: transform 0.2s;
-}
-
-button:hover {
-  transform: scale(1.05);
-}
-
-#scaryVideo {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  z-index: 10;
-}
-
-#finalMessage {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: black;
-  color: white;
-  font-size: 5vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 20;
-}
+    margin: 0;
+    font-family: 'Pacifico', cursive;
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    overflow-x: hidden;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .container {
+    padding: 50px 20px;
+  }
+  
+  .title {
+    font-size: 3em;
+    animation: pulse 2s infinite;
+  }
+  
+  #messageBox {
+    margin-top: 20px;
+    font-size: 1.5em;
+    min-height: 60px;
+  }
+  
+  .celebrate-btn {
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border: none;
+    background-color: #ff5e62;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  .celebrate-btn:hover {
+    background-color: #ff3c41;
+  }
+  
+  .icons {
+    font-size: 2.5em;
+    margin-top: 30px;
+    display: none;
+    animation: float 2s infinite ease-in-out;
+  }
+  
+  .photos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+  }
+  
+  .photo {
+    width: 200px;
+    border: 5px solid white;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    transform: scale(0.9);
+    transition: transform 0.4s;
+  }
+  .photo:hover {
+    transform: scale(1.05);
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
